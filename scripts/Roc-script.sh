@@ -294,11 +294,6 @@ if package_enabled luci-app-oaf open-app-filter; then
   clone_repository https://github.com/destan19/OpenAppFilter.git master package/OpenAppFilter
 fi
 
-# UniShare NAS 面板（依赖底层 unishare 主程序，两个包同源，一起拉）
-if package_enabled luci-app-unishare unishare; then
-  git_sparse_clone main https://github.com/kenzok8/small-package unishare luci-app-unishare webdav2 samba4-server
-fi
-
 if package_enabled luci-app-gecoosac gecoosac; then
   clone_repository https://github.com/laipeng668/luci-app-gecoosac main package/luci-app-gecoosac
 fi
