@@ -280,6 +280,14 @@ if package_enabled luci-app-openlist2 openlist2; then
   clone_repository https://github.com/laipeng668/luci-app-openlist2 main package/openlist2
 fi
 
+# UniShare
+if package_enabled luci-app-unishare unishare; then
+    rm -rf package/unishare package/luci-app-unishare
+    git_sparse_clone main https://github.com/kenzok8/small-package \
+        unishare \
+        luci-app-unishare
+fi
+
 if package_enabled luci-app-lucky lucky; then
   clone_repository https://github.com/gdy666/luci-app-lucky main package/luci-app-lucky
 fi
