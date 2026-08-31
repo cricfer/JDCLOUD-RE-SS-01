@@ -285,7 +285,8 @@ if package_enabled luci-app-unishare unishare; then
     rm -rf package/unishare package/luci-app-unishare
     git_sparse_clone main https://github.com/kenzok8/small-package \
         unishare \
-        luci-app-unishare
+        luci-app-unishare \
+        webdav2
 fi
 
 if package_enabled luci-app-lucky lucky; then
